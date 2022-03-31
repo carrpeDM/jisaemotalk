@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+    * {
+      box-sizing: border-box;
+  }
+
+a{color : green;
+font-size : 10px;}
+li{
+    list-style : none;
+  }
+html {
+  height: 100%;
+}
+
+body {
+   font-family: 'Noto Sans KR', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #d2d5d6;
+  height: 100vh;
+  margin: 0;
+}
+
+span {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.btn{
+  font-family: 'Noto Sans KR', sans-serif;
+  border:none;
+  width:20%;
+  float : left;
+}
+.btn2{
+  font-family: 'Noto Sans KR', sans-serif;
+  border-radius: 7px 7px 7px 7px;
+  width:17%;
+  height:5%;
+  float : right;
+}
+.bbtn{
+    width:60%;
+    float : left;
+    text-align : center;
+}
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: -1;
+    opacity: 0;
+  }
+  .show {
+    background-color: transparent;
+   border: none;
+   color: gray;
+   text-align: center;
+   text-decoration: none;
+    position:relative;
+    font-family: 'Noto Sans KR', sans-serif;
+    height :5%;
+    width : 100%;
+    opacity: 1;
+    z-index: 1000;
+    font-size: 1rem;
+ transition: all .5s;
+  }
+  .window {
+    position: fixed;
+    width: 100%;
+    border: 4px solid tranparent;
+    height: 100%;
+  }
+.popupup{
+  position:relative;
+  height:20%;
+}
+  .popup {
+    opacity : 0.7;
+    position: relative;
+    left:37.6%;
+    bottom : 80%;
+    border: 4px solid tranparent;
+    background-color: #ffffff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    width : 25%;
+    height: 80%;
+
+  }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height:80%;
+      position: relative;
+    bottom: 0px;
+  }
+
+  .bg-chat{ /*채팅창배경*/
+    background-color: rgb(242,242,242);
+    border: 4px solid rgb(181, 181, 181);
+    border-radius: 10px;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position :  relative;
+    display:table-cell;
+  }
+
+  .header-con{ /*제목*/
+    height : 20%
+    font-size : 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1%;
+    color: #3A1D1D;
+     z-index:20
+  }
+
+  .lion{/*라이언*/
+      width: 80px;
+      height: 70px;
+  }
+
+  .chat {
+      height: 85%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position :relative;
+  }
+
+    input {/*입력창*/
+      padding: 15px;
+      margin-left: auto;
+      border-radius: 10px;
+      border: 4px solid rgb(255, 255, 255);
+      width: 100%;
+  }
+
+  input:focus{
+      border: 4px solid rgb(155, 187, 212);
+      color: black;/*입력창 글씨색*/
+  }
+
+  .messages {/*채팅창*/
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      height: 400%;
+      width: 99%;
+      background-color: rgb(155, 187, 212);
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 4px solid rgb(155, 187, 212);
+  }
+
+  #ji {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+  }
+
+  #user{
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+  }
+
+  .ji {
+   font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+  }
+
+  .ji span{
+      background-color: rgb(255, 255, 255);
+    border-radius: 10px 10px 10px 0;
+    margin-left: 4px;
+    display : inline-block;
+    height:auto;
+  }
+
+  .avatar {
+      height: 25px;
+  }
+
+  span{
+      color: #000000;
+  }
+
+  img{
+      border-radius: 50%;
+  }
+
+  .response {/*채팅박스*/
+      display: flex;
+      align-items: left;
+      height: 25px;
+  }
+
+  #user span{
+    background-color: rgb(254, 240, 27);
+    border-radius: 10px 10px 0px 10px;
+    margin-right: 4px;
+  }
+
+
+  /* Mobile */
+
+  @media only screen and (max-width: 980px) {
+    .container {
+          flex-direction: column;
+          justify-content: flex-start;
+      }
+      .chat {
+          width: 75vw;
+          margin: 10vw;
+      }
+  }
